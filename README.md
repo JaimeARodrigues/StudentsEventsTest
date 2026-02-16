@@ -1,4 +1,4 @@
-# Event Manager - Provinha
+# Event Manager
 
 Sistema fullstack para gerenciamento de eventos em instituições educacionais, construído com React, TypeScript, .NET 8 e SQL Server.
 
