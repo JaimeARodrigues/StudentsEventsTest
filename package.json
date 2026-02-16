@@ -1,0 +1,22 @@
+{
+  "name": "event-manager",
+  "version": "1.0.0",
+  "description": "FullStack Event Manager for Educational Institutions",
+  "scripts": {
+    "setup": "bash setup.sh",
+    "backend:restore": "cd src/backend && dotnet restore",
+    "backend:migrate": "cd src/backend && dotnet ef database update",
+    "backend:run": "cd src/backend && dotnet run",
+    "backend:test": "cd src/backend && dotnet test",
+    "backend:build": "cd src/backend && dotnet build",
+    "frontend:install": "cd src/frontend && npm install",
+    "frontend:dev": "cd src/frontend && npm run dev",
+    "frontend:build": "cd src/frontend && npm run build",
+    "frontend:test": "cd src/frontend && npm run test",
+    "frontend:test:ui": "cd src/frontend && npm run test:ui",
+    "dev": "echo 'Start backend and frontend separately' && echo 'Backend: npm run backend:run' && echo 'Frontend: npm run frontend:dev'"
+  },
+  "keywords": ["fullstack", "react", "dotnet", "microsoft-graph", "education"],
+  "author": "Jaime",
+  "license": "MIT"
+}

@@ -1,0 +1,32 @@
+# Global gitignore
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# IDE
+*.user
+*.suo
+.vs/
+.vscode/
+
+# Build results
+bin/
+obj/
+dist/
+.next/
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.eslintcache
