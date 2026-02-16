@@ -27,6 +27,11 @@ yarn-error.log
 .env.local
 .env.*.local
 
+# Backend Configuration
+src/backend/appsettings.json
+src/backend/appsettings.Development.json
+src/backend/appsettings.Production.json
+
 # Cache
 .cache/
 .eslintcache
