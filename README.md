@@ -82,14 +82,33 @@ npm run frontend:install
 npm run backend:restore
 ```
 
-2. Configure o banco de dados em `src/backend/appsettings.json`:
+2. Configure o arquivo `appsettings.json`:
+
+Copie o arquivo de exemplo e configure com suas credenciais:
+```bash
+cp src/backend/appsettings.example.json src/backend/appsettings.json
+```
+
+Edite `src/backend/appsettings.json` com suas configurações:
 ```json
 {
+  "AzureAd": {
+    "ClientId": "SEU_AZURE_CLIENT_ID",
+    "ClientSecret": "SEU_AZURE_CLIENT_SECRET",
+    "TenantId": "SEU_AZURE_TENANT_ID",
+    "Instance": "https://login.microsoftonline.com/"
+  },
   "ConnectionStrings": {
     "DefaultConnection": "Server=YOUR_SERVER;Database=EventManagerDb;Trusted_Connection=true;"
+  },
+  "Jwt": {
+    "Secret": "sua-chave-secreta-com-pelo-menos-32-caracteres",
+    "ExpirationMinutes": 1440
   }
 }
 ```
+
+⚠️ **IMPORTANTE**: Nunca commite o arquivo `appsettings.json` com credenciais reais!
 
 3. Aplique as migrations:
 ```bash
@@ -255,16 +274,29 @@ VITE_API_URL=https://localhost:7000/api
 
 ### Backend
 
-Configure em `src/backend/appsettings.json`:
+⚠️ **IMPORTANTE**: O arquivo `appsettings.json` não está incluído no repositório por segurança.
+
+Copie o arquivo de exemplo e configure com suas credenciais:
+
+```bash
+cp src/backend/appsettings.example.json src/backend/appsettings.json
+```
+
+Configure `src/backend/appsettings.json` com seus valores:
 
 ```json
 {
+  "AzureAd": {
+    "ClientId": "SEU_AZURE_CLIENT_ID",
+    "ClientSecret": "SEU_AZURE_CLIENT_SECRET",
+    "TenantId": "SEU_AZURE_TENANT_ID"
+  },
   "ConnectionStrings": {
     "DefaultConnection": "Server=.;Database=EventManagerDb;Trusted_Connection=true;"
   },
-  "JwtSettings": {
-    "SecretKey": "your-secret-key-here",
-    "ExpirationMinutes": 60
+  "Jwt": {
+    "Secret": "sua-chave-secreta-com-pelo-menos-32-caracteres",
+    "ExpirationMinutes": 1440
   }
 }
 ```

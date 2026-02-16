@@ -23,10 +23,27 @@ dotnet restore
 ```
 
 2. Configurar `appsettings.json`:
+
+⚠️ **IMPORTANTE**: O arquivo `appsettings.json` não está no repositório por segurança.
+
+Copie o arquivo de exemplo:
+```bash
+cp appsettings.example.json appsettings.json
+```
+
+Edite `appsettings.json` com suas credenciais:
 ```json
 {
+  "AzureAd": {
+    "ClientId": "SEU_AZURE_CLIENT_ID",
+    "ClientSecret": "SEU_AZURE_CLIENT_SECRET",
+    "TenantId": "SEU_AZURE_TENANT_ID"
+  },
   "ConnectionStrings": {
     "DefaultConnection": "Server=YOUR_SERVER;Database=EventManagerDb;Trusted_Connection=true;"
+  },
+  "Jwt": {
+    "Secret": "sua-chave-secreta-com-pelo-menos-32-caracteres"
   }
 }
 ```
