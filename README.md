@@ -188,7 +188,6 @@ Os testes utilizam **Vitest** com **React Testing Library** e estão localizados
 ## 📁 Estrutura do Projeto
 
 ```
-Provinha/
 ├── src/
 │   ├── backend/                    # API .NET 8
 │   │   ├── API/                    # Controllers
